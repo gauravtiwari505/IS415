@@ -1,0 +1,41 @@
+svg.explorationMap {
+  /*background: #eee;*/
+  width: 1000px;
+  height: 700px;
+}
+svg.zoomOut {
+  /*background: #eee;*/
+  width: 400px;
+  height: 700px;
+}
+svg.zoomIn {
+  /*background: #eee;*/
+  width: 1000px;
+  height: 620px;
+}
+svg.zoomInIn {
+  /*background: #eee;*/
+  width: 1000px;
+  height: 620px;
+}
+#chart div {
+  width: 400px;
+  height: 700px;
+}
+
+.choro_map path {
+  fill: rgba(214,0,54,0.0);
+  stroke: #FF9900;
+  stroke-width: 1px;
+}
+
+.choro_map path:hover {
+  fill: #B10026;
+  cursor: pointer;
+}
+
+#states path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}

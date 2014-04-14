@@ -1,0 +1,588 @@
+body { 
+    position: relative; 
+    text-align: center; 
+    padding: 0px; 
+    left: auto; 
+    right: auto; 
+    color: #F6F6E8; 
+    font-family: Arial,Helvetica,sans-serif; 
+    font-size: 14px; 
+    white-space: normal;
+    background: #F6F6E8;
+    /*background: #666 url(../_images/background.jpg) repeat-x center top; */
+    margin: 0px auto; 
+}
+table {
+    border-spacing: 0px;
+    table-layout: fixed;
+}
+td {
+    padding: 0px;
+    overflow: hidden;
+}
+div {
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;    
+}
+.__page {
+    border: 0px solid black;
+    width: 1080px;
+    margin: 0 auto;
+}
+.__header {
+    border: 0px solid red;
+    width: 100%;
+}
+table.__body {
+    border: 0px solid blue;
+    display: table;
+    /*background-image: url("../_images/greyBackground.jpg");
+    background-repeat: repeat-y;*/
+}
+tr.element > td {
+    padding-left: 10px;
+    padding-right: 6px;
+    padding-top: 8px;
+}
+tr.element1 > td {
+    padding-left: 10px;
+    padding-top: 8px;
+}
+tr.element2 > td {
+    padding-left: 5px;
+    padding-right: 6px;
+    padding-top: 8px;
+}
+
+div.mapColumn{
+    display:table;
+    width:25%;
+    border-style: outset; 
+    border-width: 3px; 
+    border-color: #DADACD;
+    padding:3px;
+    position: relative;
+ 
+}
+
+div.mainSegment{
+    display:table-cell;
+    width:70%;
+    border-style: outset; 
+    border-width: 3px; 
+    border-color: #DADACD;
+    padding:3px;
+}
+
+div.mainSegmentMoran{
+    display:table-row;
+    width:100%;
+    border-style: outset; 
+    border-width: 3px; 
+    border-color: #DADACD;
+    padding:3px;
+}
+
+/* ############# Menu Interface ############# */
+
+div.iCityMenu {
+    padding-bottom: 5px;
+}
+a.subMenuButton {
+    margin-left: 9px;
+}
+img.subMenuButton {
+    width: 96px;
+    height: 30px;
+    margin-top: 4px;
+}
+img.subMenuButtonLarge {
+    width: 215px;
+    height: 70px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+/* ############# Working Interface Stuff ############# */
+
+tr.visualization{
+    height: 473px;
+    width: 472px;
+    margin-left: 10px;
+    text-align: left;
+    vertical-align:text-top;
+}
+td.statusBox > td {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 6px;
+}
+.__col1 {
+    display: table-cell;
+    vertical-align: top;
+    width: 508px;
+}
+.__col2 {
+    display: table-cell;
+    vertical-align: top;
+    width: 398px;
+}
+.__footer {
+    border: 0px solid red;
+    width: 100%;
+}
+
+.wrapper {
+    /*background-image: url("../_images/greyBackground.jpg");
+    background-position: center center;
+    background-repeat: repeat-y;*/
+    background: #555555;
+}
+a {
+    text-decoration: none;
+    color: #4F7984;
+}
+img {
+    border: 0px solid;
+}
+
+img.hideInputButton{
+    position: absolute;
+    height: 30px;
+    width: 25px;
+    top:7px;
+    right:25px;
+    opacity:0.6;
+}
+img.hideInputButton:hover{
+    position: absolute;
+    height: 30px;
+    width: 25px;
+    top:7px;
+    right:25px;
+    opacity:1;
+    cursor:pointer;
+}
+
+img.zoomInButton{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top:40px;
+    right:29px;
+    opacity:0.6;
+}
+img.zoomInButton:hover{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top:40px;
+    right:29px;
+    opacity:1;
+    cursor:pointer;
+}
+img.zoomOutButton{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top:60px;
+    right:29px;
+    opacity:0.6;
+}
+img.zoomOutButton:hover{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top:60px;
+    right:29px;
+    opacity:1;
+    cursor:pointer;
+}
+
+/* ########### box header and box content ########### */
+
+.boxHeader {
+    /*color: #5F5F5F;*/
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+    vertical-align: bottom;
+    width:100%;
+}
+.subBoxHeader {
+    color: White;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    vertical-align: bottom;
+}
+.boxHeaderWithButton > td.boxHeader {
+    padding-top: 8px;
+}
+.boxHeaderButton {
+    text-align: right;
+    height: 29px;
+    padding-right: 15px;
+}
+.boxContent > td {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 6px;
+}
+.boxBody > td {
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+}
+
+/* ############## HEADER ############ */
+
+.header {
+    font-family: Verdana, Geneva, sans-serif;
+    background-image: url(../_images/Picture1.jpg);
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    height: 110px;
+    width: 906px;
+    top: 0px;
+}
+div.logo {
+    /*text-align: left;*/
+    width: 250px;
+    border-style: inset; 
+    border-width: 3px; 
+    border-color: #DADACD;
+    vertical-align: middle;
+    font-size: 16px;
+    background: #6A6A66;
+}
+a.logo {
+    margin-left: 9px;
+}
+img.logo {
+    /*width: 152px;*/
+    height: 30px;
+}
+
+/* ############## iCity ############ */
+table.bodyContainer{
+    /*    float:left;*/
+    overflow:hidden;
+    width:887px;
+}
+
+div.dataInputCell{
+    display:table;
+    width: 100%;
+    min-height: 195px;
+    /*height: 495px;*/
+}
+
+div.topBorderDivider{
+    border-top-style: groove; 
+    border-width: 3px; 
+    border-color: #DADACD;
+    overflow:hidden;
+    padding-top: 8px;
+}
+
+div.boxHeader {
+    /*color: #5F5F5F;*/
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 0px;
+    vertical-align: bottom;
+    width:100%;
+}
+
+div.data_Entry_Title{
+    height: 25px;
+    width:98%;
+}
+
+div.data_Entry{
+    /*color: #5F5F5F;*/
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: left;
+    vertical-align:text-top;
+    /*float:left;*/
+    overflow:hidden;
+    display: table;
+    width:100%;
+}
+
+td.__body{
+    padding-left: 11px;
+    padding-right: 8px;
+}
+
+td.__halfPage {
+    display: table-cell;
+    vertical-align: top;
+    border-style: outset;
+    border-width: 3px;
+    padding: 5px;
+    border-color: #DADACD;
+    position: relative;
+}
+
+td.__parameterEstimateBox {
+    display: table-cell;
+    vertical-align: top;
+    border-style: outset;
+    border-width: 3px;
+    padding: 5px;
+    border-color: #DADACD;
+    position: relative;
+    width: 68.5%;
+}
+
+input.yearInput{
+    width:50px;
+}
+
+.connectedSortable{
+    width:355px;
+    height: 120px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /*display:inline-block;
+    padding-top: 5px;
+    padding-right: 20px;*/
+}
+
+div.dualListBox{
+    position: relative;
+}
+
+td.modelOutputs{
+    width: 250px;
+    vertical-align: top;
+}
+
+td.mapKey{
+    width:170px;
+    vertical-align: top;
+}
+
+td.keyColorBox{
+    width:20px;
+    height:20px;
+}
+
+/*.tooltip {
+    display:none;
+    background:black;
+    font-size:12px;
+    /*height:15px;*
+    max-width:220px;
+    padding:10px;
+    color:#eee;
+}*/
+
+tr.paraHeader {
+    text-align: center;
+}
+
+th.paraCell {
+    font-weight: bold; 
+    border-style:solid; 
+    border-width: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr.paraEstimateRow{
+    height:30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.tooltip {
+    display:none;
+    background:black;
+    font-size:12px;
+    /*height:15px;
+    width:70px;*/
+    padding:10px;
+    color:#eee;
+    z-index: 3;
+}
+
+/* ############## Parallel Coordinates ############ */
+
+svg {
+    font: 10px sans-serif;
+}
+
+.varTitle{
+    cursor: pointer;
+}
+
+.varTitle:hover{
+    opacity: 0.75; 
+}
+
+.brush .extent {
+    fill-opacity: .3;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.axis line, .axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    text-shadow: 0 1px 0 #fff;
+}
+
+select{
+    height:25px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-color: #BDBDBD;
+    font-weight: bold;
+}
+
+select:focus {
+    height:25px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-color: #DBA901;  
+}
+
+select:hover {
+    height:25px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-color: #DBA901;
+}
+
+input.textbox{
+    height:20px;
+    border-width: 1px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-color: #BDBDBD;    
+}
+
+img.dimension_nav{
+    height:100%;
+    opacity: 0.5;
+}
+img.dimension_nav:hover{
+    height:100%;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+line.boxplot{
+    /*stroke:#8A088A;*/
+    stroke:#F6F6E8;
+    stroke-width:2;
+    opacity: 0.5;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #E6E6E6;/*#F6F6E8;*/
+    shape-rendering: crispEdges;
+}
+.axis{
+    fill: #E6E6E6;
+}
+.axisTitle {
+    font-size: 12px;
+    fill: #F6F6E8;
+}
+
+.avgLine {
+    fill: none;
+    stroke: #E6E6E6;/*#F6F6E8;*/
+    shape-rendering: crispEdges;    
+    stroke-dasharray: 9, 5;
+    stroke-opacity: 0.5;
+}
+
+#choropleth_legend_mi {
+    fill: #E6E6E6;
+}
+
+#choropleth_legend {
+    fill: #E6E6E6;
+}
+
+.selecting circle {
+  stroke-opacity: .4;
+}
+
+.selecting circle.selected {
+  fill: #F4FA58;
+  fill-opacity: 1;
+    stroke: yellow;
+}
+
+.boxplotPoints {
+    stroke: #F6F6E8;
+    stroke-width: 1.2;
+    fill: rgba(215,0,54,0.0);
+}
+
+.scatterplotPoints {
+    stroke: #F6F6E8;
+    stroke-width: 1.2;
+    fill: rgba(215,0,54,0.0);
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+text.legend-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+circle.outliers{
+    stroke:#8A088A;
+    stroke-width:2;
+    opacity: 0.85;
+    fill:#8A088A;/*rgba(124,240,10,0.0);*/
+}
+
+.hideOption{
+    text-decoration:underline;
+    color: #08298A;
+    cursor: pointer;
+}
+
+.hideOption:hover{
+    color: grey;
+    cursor: pointer;
+}
