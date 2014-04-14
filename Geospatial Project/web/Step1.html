@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+    <head> 
+        <title>iCity Migration Prediction Modeler</title>
+        <meta charset="utf-8" />
+
+        <script src="_js/jquery-1.8.0.min.js" type="text/javascript"></script>
+        <script src="_js/jquery-ui-1.9.1.custom.min.js" type="text/javascript"></script>
+        <script src="_js/step1Upload.js" type="text/javascript"></script>
+        <link href="_css/geospatial_Migration.css" rel="stylesheet" type="text/css" />	
+        <link href="_css/jquery-ui-1.8.4.custom.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body id="trialbody">
+        
+        <div id="beardy">
+            <div style="display: table;" class="__page wrapper" >
+                <div class="mainSegment">
+                    <div>
+                        <div id="iCityMenu" class="iCityMenu">
+                            <div style="display: table-cell" class="logo">
+                                <b>I</b>nteractive <b>A</b>rea <b>H</b>otspot <b>D</b>etector
+                            </div>
+                            <div style="display: table-cell;padding-left: 8px;">
+                                <div style="display: table-cell" class="subMenuButton">
+                                    <img id="step1button" class="subMenuButton" src="_images/Step1On.png"></img>
+                                </div>
+                                <div style="display: table-cell" class="subMenuButton" >
+                                    <a href="Step2.html"><img class="subMenuButton" src="_images/Step2Off.png" onmouseover="this.src='_images/Step2On.png'" onmouseout="this.src='_images/Step2Off.png'"></img></a>					
+                                </div>
+                            </div>
+                        </div>
+                         <div class="topBorderDivider" style="min-height: 980px">
+                            <div class="dataInputCell">
+                                <div class="data_Entry">
+                                    <div class="data_Entry">
+                                        <div>
+                                            <form action="./DataBaseCtrl?action=csvUpload" method="post" enctype="multipart/form-data" name="productForm" id="productForm">
+                                                <br/>
+                                                <div class="boxHeader" style="display:inline">
+                                                    <span><b>Step 1)</b> Variable Data (.csv) File Upload: <input id="file" class="textbox" type="file" name="file"style="width:300px;"/></span>&nbsp;&nbsp;
+                                                    <input type="submit" value="Upload" style="width: 80px; height: 25px;"/>
+                                                </div>
+                                            </form>                                            
+                                        </div>
+                                        <br/>
+                                        <div>
+                                            <form action="./DataBaseCtrl?action=metaDataUpload" method="post" enctype="multipart/form-data" name="productForm" id="productForm">
+
+                                                <div class="boxHeader" style="display:inline">
+
+                                                    <span><b>Step 1a)</b> Meta Data (.csv) File Upload: <input id="file" class="textbox" type="file" name="file"style="width:300px;"/></span>&nbsp;&nbsp;
+                                                    <input type="submit" value="Upload" style="width: 80px; height: 25px;"/>
+                                                </div>
+                                            </form>                                            
+                                        </div>                                        
+                                    </div>
+                                    <br/>
+                                    <div class="topBorderDivider" >
+                                        <div class="dataInputCell">
+                                            <div class="data_Entry_Title">
+                                                <div class="boxHeader"><b><u>Currently Uploaded Variable-CSV Summary:</u></b></div>
+                                            </div>
+                                            <p><b>Total Number of Variables (excluding "ADM2CODE" and "Province"): </b><span id="variableCount"></span></p>
+                                            <div class="data_Entry">
+                                                <table width="100%">
+                                                    <thead>
+                                                        <tr class="paraHeader">
+                                                            <th class="ui-state-default paraCell" width="250">Variable Name</th>
+                                                            <th class="ui-state-default paraCell" >Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="variableSummary">
+                                                        <tr class="paraEstimateRow">
+                                                            <td title="Term" class="ui-widget-content"></td>
+                                                            <td title="Estimate" class="ui-widget-content" ></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mapColumn">
+                    <div style="position: absolute;">
+                        <div class="data_Entry">
+                            <div>
+                                <form action="./DataBaseCtrl?action=shpUpload" method="post" enctype="multipart/form-data" name="productForm" id="productForm">
+                                    <div class="boxHeader" style="display:inline">
+                                        <br/>
+                                        <b>Step2)</b> Shape File (.shp) Upload:
+                                        <div style="padding-top: 10px">
+                                            <input id="shapeFile" class="textbox" type="file" name="file"style="width:250px;"/>
+                                        </div>
+                                        <div style="padding-top: 10px">
+                                            <input type="submit" value="Upload" style="width: 80px; height: 25px;"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="topBorderDivider" style="width: 96%">
+                                <div class="data_Entry_Title">
+                                    <div class="boxHeader"><b><u>Shapefile Components:</u></b></div>
+                                </div>                            
+                                <table width="260">
+                                    <thead>
+                                        <tr class="paraHeader">
+                                            <th class="ui-state-default paraCell">File Extension</th>
+                                            <th class="ui-state-default paraCell">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="paraEstimateRow">
+                                            <td id="shp" class="ui-widget-content"><b>.shp</b> (Required)</td>
+                                            <td id="shpStatus" class="ui-widget-content" ></td>
+                                        </tr> 
+                                        <tr class="paraEstimateRow">
+                                            <td id="shx" class="ui-widget-content"><b>.shx</b> (Required)</td>
+                                            <td id="shxStatus" class="ui-widget-content" ></td>
+                                        </tr>   
+                                        <tr class="paraEstimateRow">
+                                            <td id="dbf" class="ui-widget-content"><b>.dbf</b> (Required)</td>
+                                            <td id="dbfStatus" class="ui-widget-content" ></td>
+                                        </tr>  
+                                        <tr class="paraEstimateRow">
+                                            <td id="csv" class="ui-widget-content"><b>.csv</b></td>
+                                            <td id="csvStatus" class="ui-widget-content" ></td>
+                                        </tr>
+                                        <tr class="paraEstimateRow">
+                                            <td id="shpctg" class="ui-widget-content"><b>.shpctg</b></td>
+                                            <td id="shpctgStatus" class="ui-widget-content" ></td>
+                                        </tr>
+                                        <tr class="paraEstimateRow">
+                                            <td id="xml" class="ui-widget-content"><b>.xml</b></td>
+                                            <td id="xmlStatus" class="ui-widget-content" ></td>
+                                        </tr> 
+                                    </tbody>       
+                                </table>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="data_Entry_Title">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

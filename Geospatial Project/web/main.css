@@ -1,0 +1,274 @@
+    ﻿/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  
+    background-image: url(./_images/sample1.jpg); 
+    background-repeat: repeat;
+    color : #ffffff; /*#515151;*/
+    font-family: Cursive, 'UniversElseRegular', Arial, sans-serif;
+    font-size: 22;
+    width: 1200px;
+	height: 50px;
+}
+
+#legend {
+    width:220px;
+    border-radius: 10px;
+    border: 5px solid #89C5C5;
+    position: absolute;
+    top: 333px;
+    left: 0px;
+    margin: 10px;
+    background: none repeat scroll 0 0 #89C5C5 0.6;
+    padding: 10px;
+    font-size:0.8em;
+    background-opacity: 0.5;
+    color: white;
+    cursor: move;
+}
+
+#geoloc_me {
+    position : absolute;
+    top: 285px;
+    left: 10px;
+    cursor : pointer;
+}
+#social {
+    position : absolute;
+    top: 64px;
+    left: 10px;
+}
+
+#plusone {
+    position : absolute;
+    top: 10px;
+    left : 110px;
+}
+
+#countries {
+    width: 80%;
+}
+
+#country_name_popup {
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #515151;
+    background: lightgray;
+    margin: 10px;
+    padding: 10px;
+    font-size:0.8em; 
+
+    position:fixed;
+
+    display:none;
+    z-index: 102;
+
+}
+#country_select_div
+{
+   padding: 10px;
+}
+
+#container{
+    margin: auto;
+    width:1200px;
+    height:580px;
+    position: relative;
+}
+
+
+h2 {
+    margin: -7px -17px 6px -0.8px;
+    padding: 2px 2px 13px 0;
+    font-size: 22px;
+    font-family: Georgia;
+}
+
+#inorout {
+    color: green;
+    border-radius: 10px;
+    border: 3px solid #C0C0C0;
+    background: #89C5C5;
+    margin: 10px;
+    padding: 10px;
+    font-size:20px;
+    float: left;
+    width: 180x;
+    height:20px;
+    /*position:absolute;*/
+}
+
+#button {
+    color: black;
+    border-radius: 10px;
+    border: 3px solid #C0C0C0;
+    background: #89C5C5;
+    margin: 10px;
+    padding: 10px;
+    font-size:20px;
+    float: left;
+    width: 180x;
+    height:20px;
+    font-family: Georgia;
+    text-decoration: none;
+    
+    /*position:absolute;*/
+}
+a.blackLink {
+    color:black;
+    font-size: 20px;
+    font-family: Georgia;
+    text-decoration: none;
+}
+#country_select_div{
+    color: black;
+    border-radius: 10px;
+    border: 3px solid #C0C0C0;
+    background: #89C5C5;
+    margin: 10px;
+    padding: 10px;
+    font-size:20px;
+    font-family: Georgia;
+    float: left;
+    height: 20px;
+    /*position:absolute;*/
+
+}
+
+#inorout span {
+    margin-left: 10px;
+    padding-left: 19px;
+    padding-bottom: 9px;
+}
+#inorout span.on {
+    background-image: url("right_blue_arrow1.png");
+    background-position: 0 10% 50% 5% ;
+    background-repeat: no-repeat;
+}
+
+a {
+    color:#f5f5f5;
+    margin-top: -80px;
+    z-index: -10;
+}
+
+#title {
+    color: #999999;
+    float:right;
+    font-size:24px;
+    padding: 20px;
+    position:absolute;
+    top : 0px;
+    left : 969px;
+    margin: 0 0 0 0;
+    text-align: left;
+}
+
+h1 {
+    display:inline;
+
+}
+a h1  {
+    text-decoration: none;
+}
+
+td {
+    height: 1.5em;
+}
+td.country_name{
+    height: 1.5em;
+    padding-left:1em;
+
+}
+
+#legend .country_name{
+  cursor: pointer;
+}
+
+
+
+#popup_country_name{
+    display:block;
+    font-size: 1.4em;
+    padding-bottom:4px;
+    margin-bottom:4px;
+    border-bottom: 3px solid #C0C0C0;
+    width:250px;
+    border-radius: 2px;
+
+}
+
+#country_name_popup th{
+    text-align: right;
+}
+#country_name_popup th{
+    text-align: left;
+}
+
+h3{
+    margin-bottom: 10px;
+    margin-top:-2px;
+    font-family: Georgia;
+    font-size: 15px;
+
+}
+
+option{
+	font-family: cursive;
+
+}
+
+#year_select{
+	font-family: cursive;
+}
+#country_select{
+	font-family: cursive;
+}
